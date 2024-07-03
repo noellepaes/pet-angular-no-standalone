@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class TabelaComponent {
 
+  tabela: any[] = [];
+  displayedColumns = ['nome', 'categoria'];
+
+  constructor() {}
+
+  ngOnInit():void{
+    // TODO document why this method 'ngOnInit' is empty
+
+
+  }
+
 }

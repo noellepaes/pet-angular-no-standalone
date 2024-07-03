@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', pathMatch:'full', redirectTo: 'tabela'},
   {
-    path: 'items',
+    path: 'tabela',
     loadChildren: () => import('./tabela/tabela.module').then(m => m.TabelaModule)
   }
 ];
