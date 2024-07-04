@@ -3,17 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { TabelaRoutingModule } from './tabela-routing.module';
 import { TabelaComponent } from './tabela/tabela.component';
-import {MatTableModule} from '@angular/material/table';
+import { AppMaterialModule } from '../shared/app-material/app-material.module';
 
 
 @NgModule({
-  declarations: [
-    TabelaComponent
-  ],
+  declarations: [TabelaComponent],
   imports: [
     CommonModule,
     TabelaRoutingModule,
-    MatTableModule
-  ]
+    AppMaterialModule
+  ],
 })
 export class TabelaModule { }
