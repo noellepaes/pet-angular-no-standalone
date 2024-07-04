@@ -1,4 +1,7 @@
+import { Observable } from 'rxjs';
+import { TabelaService } from './../services/tabela.service';
 import { Component } from '@angular/core';
+import { Tabela } from '../model/tabela';
 
 @Component({
   selector: 'app-tabela',
@@ -7,12 +10,14 @@ import { Component } from '@angular/core';
 })
 export class TabelaComponent {
 
-  tabela: any[] = [
-    {_id:"1", nome: 'Angular', categoria: 'front-end'}
-  ];
+  tabela: Observable<Tabela[]>;
   displayedColumns = ['nome', 'categoria'];
 
-  constructor() {}
 
+
+  constructor(private tabelaService: TabelaService) {
+
+    this.tabela = this.tabelaService.list();
+  }
 
 }
