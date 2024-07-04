@@ -1,4 +1,7 @@
+import { Observable } from 'rxjs';
+import { TabelaService } from './../services/tabela.service';
 import { Component } from '@angular/core';
+import { Tabela } from '../model/tabela';
 
 @Component({
   selector: 'app-tabela',
@@ -7,15 +10,14 @@ import { Component } from '@angular/core';
 })
 export class TabelaComponent {
 
-  tabela: any[] = [];
+  tabela: Observable<Tabela[]>;
   displayedColumns = ['nome', 'categoria'];
 
-  constructor() {}
-
-  ngOnInit():void{
-    // TODO document why this method 'ngOnInit' is empty
 
 
+  constructor(private tabelaService: TabelaService) {
+
+    this.tabela = this.tabelaService.list();
   }
 
 }
