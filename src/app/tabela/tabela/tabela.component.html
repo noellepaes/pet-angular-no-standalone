@@ -15,7 +15,11 @@
       <!-- Name categoria -->
       <ng-container matColumnDef="categoria">
         <th mat-header-cell *matHeaderCellDef> Categoria</th>
-        <td mat-cell *matCellDef="let pet"> {{ pet.categoria }} </td>
+        <td mat-cell *matCellDef="let pet"> {{ pet.categoria }}
+                  <mat-icon aria-hidden="false" aria-label="Example home icon" >{{ pet.categoria | categoria }}</mat-icon>
+
+        </td>
+
       </ng-container>
 
 
