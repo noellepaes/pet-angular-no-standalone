@@ -1,0 +1,22 @@
+[33m2b376c9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32maula-9-codec[m[33m, [m[1;31morigin/aula-9-codec[m[33m)[m HEAD@{0}: commit: apaguei toda essa merda
+[33mdc2e3c6[m HEAD@{1}: merge main: updating HEAD
+[33mdc2e3c6[m HEAD@{2}: checkout: moving from aula-9-codec to aula-9-codec
+[33mdc2e3c6[m HEAD@{3}: pull origin main: updating HEAD
+[33mdc2e3c6[m HEAD@{4}: checkout: moving from tabela to aula-9-codec
+[33m4789a3a[m[33m ([m[1;31morigin/tabela[m[33m, [m[1;32mtabela[m[33m)[m HEAD@{5}: checkout: moving from aula-9-codec to tabela
+[33mdc2e3c6[m HEAD@{6}: checkout: moving from main to aula-9-codec
+[33mf7e9e9f[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{7}: pull: Fast-forward
+[33m01110e5[m HEAD@{8}: checkout: moving from tabela to main
+[33m4789a3a[m[33m ([m[1;31morigin/tabela[m[33m, [m[1;32mtabela[m[33m)[m HEAD@{9}: checkout: moving from aula-9-codec to tabela
+[33mdc2e3c6[m HEAD@{10}: commit: icone || aula 12 || acabei esta merda
+[33m5b16e64[m HEAD@{11}: commit: pop up de erro
+[33m66d53d8[m HEAD@{12}: checkout: moving from tabela to aula-9-codec
+[33m4789a3a[m[33m ([m[1;31morigin/tabela[m[33m, [m[1;32mtabela[m[33m)[m HEAD@{13}: reset: moving to HEAD
+[33m4789a3a[m[33m ([m[1;31morigin/tabela[m[33m, [m[1;32mtabela[m[33m)[m HEAD@{14}: checkout: moving from main to tabela
+[33m01110e5[m HEAD@{15}: checkout: moving from aula-9-codec to main
+[33m66d53d8[m HEAD@{16}: checkout: moving from main to aula-9-codec
+[33m01110e5[m HEAD@{17}: pull --tags origin main: Fast-forward
+[33mc6b66f5[m HEAD@{18}: checkout: moving from aula-9-codec to main
+[33m66d53d8[m HEAD@{19}: commit: redei esta bosta finalmente
+[33mc6b66f5[m HEAD@{20}: checkout: moving from main to aula-9-codec
+[33mc6b66f5[m HEAD@{21}: clone: from https://github.com/noellepaes/pet-angular-no-standalone.git
