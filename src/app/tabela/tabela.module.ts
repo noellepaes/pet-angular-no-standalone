@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { TabelaRoutingModule } from './tabela-routing.module';
 import { TabelaComponent } from './tabela/tabela.component';
-import { AppMaterialModule } from '../shared/app-material/app-material.module';
 import { SharedModule } from '../shared/shared.module';
+import { AppMaterialModule } from '../shared/app-material/app-material.module';
 
 
 @NgModule({
