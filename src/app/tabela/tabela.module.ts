@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TabelaRoutingModule } from './tabela-routing.module';
 import { TabelaComponent } from './tabela/tabela.component';
+import { SharedModule } from '../shared/shared.module';
 import { AppMaterialModule } from '../shared/app-material/app-material.module';
 
 
@@ -11,7 +12,8 @@ import { AppMaterialModule } from '../shared/app-material/app-material.module';
   imports: [
     CommonModule,
     TabelaRoutingModule,
-    AppMaterialModule
+    AppMaterialModule,
+    SharedModule
   ],
 })
 export class TabelaModule { }
