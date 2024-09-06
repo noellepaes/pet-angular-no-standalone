@@ -12,7 +12,7 @@ import { error } from 'console';
 export class TabelaComponent {
 
   tabela$: Observable<Tabela[]>;
-  displayedColumns = ['nome', 'categoria'];
+  displayedColumns = ['_id', 'nome', 'categoria'];
 
 
 
