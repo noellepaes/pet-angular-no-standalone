@@ -8,7 +8,7 @@ import { delay, first, tap } from 'rxjs';
 })
 export class TabelaService {
 
-  private readonly API = 'api/tabela';
+  private readonly API = '/assets/tabela.json';
 
   constructor(private httpClient: HttpClient) { }
 
