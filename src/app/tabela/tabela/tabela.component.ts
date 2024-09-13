@@ -2,7 +2,8 @@ import { catchError, Observable, of } from 'rxjs';
 import { TabelaService } from './../services/tabela.service';
 import { Component } from '@angular/core';
 import { Tabela } from '../model/tabela';
-import { error } from 'console';
+import { MatDialog } from '@angular/material/dialog';
+import { ErrorDialogComponent } from '../../shared/components/error-dialog/error-dialog.component';
 
 @Component({
   selector: 'app-tabela',
@@ -16,14 +17,23 @@ export class TabelaComponent {
 
 
 
-  constructor(private tabelaService: TabelaService) {
+  constructor(
+    private tabelaService: TabelaService,
+    public dialog: MatDialog
+  ) {
 
     this.tabela$ = this.tabelaService.list()
     .pipe(
       catchError(error => {
-        console.log(error);
+        this.onError('Erro ao carregar tabela.')
         return of([])
       })
     );
+  }
+
+  onError(errorMsg: string){
+    this.dialog.open(ErrorDialogComponent, {
+      data: errorMsg
+    });
   }
 }
