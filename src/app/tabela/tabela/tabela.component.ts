@@ -18,7 +18,7 @@ export class TabelaComponent {
 
 
   constructor(
-    private tabelaService: TabelaService,
+    private readonly tabelaService: TabelaService,
     public dialog: MatDialog
   ) {
 
