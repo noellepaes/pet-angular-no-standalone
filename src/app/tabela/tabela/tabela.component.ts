@@ -4,6 +4,8 @@ import { Component } from '@angular/core';
 import { Tabela } from '../model/tabela';
 import { MatDialog } from '@angular/material/dialog';
 import { ErrorDialogComponent } from '../../shared/components/error-dialog/error-dialog.component';
+import { ActivatedRoute, Router } from '@angular/router';
+import { relative } from 'path';
 
 @Component({
   selector: 'app-tabela',
@@ -13,13 +15,15 @@ import { ErrorDialogComponent } from '../../shared/components/error-dialog/error
 export class TabelaComponent {
 
   tabela$: Observable<Tabela[]>;
-  displayedColumns = ['_id', 'nome', 'categoria'];
+  displayedColumns = [ 'nome', 'categoria','actions'];
 
 
 
   constructor(
     private readonly tabelaService: TabelaService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router,
+    private route: ActivatedRoute
   ) {
 
     this.tabela$ = this.tabelaService.list()
@@ -35,5 +39,10 @@ export class TabelaComponent {
     this.dialog.open(ErrorDialogComponent, {
       data: errorMsg
     });
+  }
+
+  // pega o new e adiciona a rota já criada
+  onAdd(){
+    this.router.navigate(['new'], {relativeTo:this.route});
   }
 }

@@ -16,7 +16,7 @@ export class TabelaService {
     return this.httpClient.get<Tabela[]>(this.API)
     .pipe(
       first(),
-      delay(5000),
+      delay(500),
       tap(tabela => console.log(tabela))
     );
   }
