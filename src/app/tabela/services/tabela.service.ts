@@ -8,9 +8,9 @@ import { delay, first, tap } from 'rxjs';
 })
 export class TabelaService {
 
-  private readonly API = '/assets/tabela.json';
+  private readonly API = 'api/tabela';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private readonly httpClient: HttpClient) { }
 
   list() {
     return this.httpClient.get<Tabela[]>(this.API)
