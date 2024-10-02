@@ -5,10 +5,11 @@ import { TabelaRoutingModule } from './tabela-routing.module';
 import { TabelaComponent } from './tabela/tabela.component';
 import { SharedModule } from '../shared/shared.module';
 import { AppMaterialModule } from '../shared/app-material/app-material.module';
+import { TabelaFormComponent } from './tabela-form/tabela-form.component';
 
 
 @NgModule({
-  declarations: [TabelaComponent],
+  declarations: [TabelaComponent, TabelaFormComponent],
   imports: [
     CommonModule,
     TabelaRoutingModule,
