@@ -21,7 +21,7 @@ export class TabelaService {
     );
   }
 
-  save(record: Tabela){
+  save(record: Partial<Tabela>){
     return this.httpClient.post<Tabela>(this.API, record);
   }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormGroup, NonNullableFormBuilder } from '@angular/forms';
 import { Location } from '@angular/common';
 import { TabelaService } from '../services/tabela.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -14,14 +14,14 @@ export class TabelaFormComponent {
   form: FormGroup;
 
   constructor(
-    private formBuider: FormBuilder,
+    private formBuider: NonNullableFormBuilder,
     private service: TabelaService,
     private snackBar: MatSnackBar,
     private location: Location
   ){
     this.form = this.formBuider.group({
-      nome:[null],
-      categoria: [null]
+      nome:[''],
+      categoria: ['']
     });
   }
 
