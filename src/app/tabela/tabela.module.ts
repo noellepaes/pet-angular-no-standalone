@@ -6,6 +6,8 @@ import { TabelaComponent } from './tabela/tabela.component';
 import { SharedModule } from '../shared/shared.module';
 import { AppMaterialModule } from '../shared/app-material/app-material.module';
 import { TabelaFormComponent } from './tabela-form/tabela-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -14,7 +16,8 @@ import { TabelaFormComponent } from './tabela-form/tabela-form.component';
     CommonModule,
     TabelaRoutingModule,
     AppMaterialModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ],
 })
 export class TabelaModule { }

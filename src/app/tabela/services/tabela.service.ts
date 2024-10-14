@@ -20,4 +20,8 @@ export class TabelaService {
       tap(tabela => console.log(tabela))
     );
   }
+
+  save(record: Tabela){
+    return this.httpClient.post<Tabela>(this.API, record);
+  }
 }

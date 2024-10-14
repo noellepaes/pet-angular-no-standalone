@@ -1,1 +1,38 @@
-<p>tabela-form works!</p>
+<mat-grid-list cols="1" rows="1" rowHeight="2:1">
+  <mat-grid-tile>
+
+      <mat-card appearance="outlined">
+        <mat-toolbar color="primary">
+        <span>Detalhes do curso</span>
+        </mat-toolbar>
+        <mat-card-content>
+          <div>
+
+            <form [formGroup]="form" action="" >
+
+              <mat-form-field class="full-width">
+                <input matInput placeholder="Nome" formControlName="name">
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Toppings</mat-label>
+                <mat-select formControlName="category">
+                  <mat-option value="null"></mat-option>
+                  <mat-option value="front-end">front-end</mat-option>
+                  <mat-option value="back-end">back-end</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="onSubmit()">Salvar</button>
+                <button mat-raised-button (click)="onCancel()">Cancelar</button>
+              </mat-card-actions>
+
+
+            </form>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+  </mat-grid-tile>
+</mat-grid-list>
