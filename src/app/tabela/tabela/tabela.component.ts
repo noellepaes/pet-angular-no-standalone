@@ -15,7 +15,7 @@ import { relative } from 'path';
 export class TabelaComponent {
 
   tabela$: Observable<Tabela[]>;
-  displayedColumns = [ 'nome', 'categoria','actions'];
+
 
 
 

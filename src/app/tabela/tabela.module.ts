@@ -7,11 +7,12 @@ import { SharedModule } from '../shared/shared.module';
 import { AppMaterialModule } from '../shared/app-material/app-material.module';
 import { TabelaFormComponent } from './tabela-form/tabela-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TabelaListaComponent } from './tabela-lista/tabela-lista.component';
 
 
 
 @NgModule({
-  declarations: [TabelaComponent, TabelaFormComponent],
+  declarations: [TabelaComponent, TabelaFormComponent, TabelaListaComponent],
   imports: [
     CommonModule,
     TabelaRoutingModule,
