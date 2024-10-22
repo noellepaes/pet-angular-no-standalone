@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Tabela } from '../model/tabela';
 import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-tabela-lista',
@@ -10,15 +11,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class TabelaListaComponent {
 
   @Input() tabela: Tabela[] = [];
+  @Output() add = new EventEmitter(false);
+
   readonly displayedColumns = [ 'nome', 'categoria','actions'];
 
-  constructor(
-
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
+  constructor() {}
 
   onAdd(){
-    this.router.navigate(['new'], {relativeTo:this.route});
+    this.add.emit(true);
   }
 }

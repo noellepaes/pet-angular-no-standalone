@@ -4,7 +4,10 @@
 
       <div class="mat-elevation-z8">
 
-      <app-tabela-lista *ngIf="tabela$ |  async as tabela; else loading" [tabela]="tabela"></app-tabela-lista>
+      <app-tabela-lista *ngIf="tabela$ |  async as tabela; else loading"
+       [tabela]="tabela"
+       (add)="onAdd()"
+       ></app-tabela-lista>
 
 
 
