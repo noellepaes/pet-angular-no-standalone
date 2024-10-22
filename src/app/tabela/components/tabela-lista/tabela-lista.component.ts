@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Tabela } from '../model/tabela';
+import { Tabela } from '../../model/tabela';
 import { ActivatedRoute, Router } from '@angular/router';
 
 

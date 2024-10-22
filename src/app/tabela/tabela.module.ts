@@ -5,9 +5,9 @@ import { TabelaRoutingModule } from './tabela-routing.module';
 import { TabelaComponent } from './containers/tabela/tabela.component';
 import { SharedModule } from '../shared/shared.module';
 import { AppMaterialModule } from '../shared/app-material/app-material.module';
-import { TabelaFormComponent } from './tabela-form/tabela-form.component';
+import { TabelaFormComponent } from './components/tabela-form/tabela-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { TabelaListaComponent } from './tabela-lista/tabela-lista.component';
+import { TabelaListaComponent } from './components/tabela-lista/tabela-lista.component';
 
 
 

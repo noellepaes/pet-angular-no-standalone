@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, NonNullableFormBuilder } from '@angular/forms';
 import { Location } from '@angular/common';
-import { TabelaService } from '../services/tabela.service';
+import { TabelaService } from '../../services/tabela.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
