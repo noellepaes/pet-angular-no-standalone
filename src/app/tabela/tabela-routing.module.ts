@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabelaComponent } from './containers/tabela/tabela.component';
-import { TabelaFormComponent } from './tabela-form/tabela-form.component';
+import { TabelaFormComponent } from './components/tabela-form/tabela-form.component';
 
 const routes: Routes = [
   { path: '', component: TabelaComponent },
