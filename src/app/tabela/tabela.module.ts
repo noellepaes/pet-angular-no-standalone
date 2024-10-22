@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { TabelaRoutingModule } from './tabela-routing.module';
-import { TabelaComponent } from './tabela/tabela.component';
+import { TabelaComponent } from './containers/tabela/tabela.component';
 import { SharedModule } from '../shared/shared.module';
 import { AppMaterialModule } from '../shared/app-material/app-material.module';
 import { TabelaFormComponent } from './tabela-form/tabela-form.component';
