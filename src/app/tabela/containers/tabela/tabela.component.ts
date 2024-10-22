@@ -1,9 +1,9 @@
 import { catchError, Observable, of } from 'rxjs';
-import { TabelaService } from './../services/tabela.service';
+import { TabelaService } from '../../services/tabela.service';
 import { Component } from '@angular/core';
-import { Tabela } from '../model/tabela';
+import { Tabela } from '../../model/tabela';
 import { MatDialog } from '@angular/material/dialog';
-import { ErrorDialogComponent } from '../../shared/components/error-dialog/error-dialog.component';
+import { ErrorDialogComponent } from '../../../shared/components/error-dialog/error-dialog.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { relative } from 'path';
 
@@ -15,7 +15,7 @@ import { relative } from 'path';
 export class TabelaComponent {
 
   tabela$: Observable<Tabela[]>;
-  displayedColumns = [ 'nome', 'categoria','actions'];
+
 
 
 
