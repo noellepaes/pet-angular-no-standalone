@@ -17,7 +17,7 @@ export const tabelaResolver: ResolveFn<Tabela | null> = (route: ActivatedRouteSn
   return tabelaService.loadById(id).pipe(
     catchError(error => {
       console.error('Falha ao buscar os dados', error);
-      return of(null);  // Retorna null ou lida com o erro de forma apropriada
+      return of({_id: '', nome: '', categoria: '' });  // Retorna null ou lida com o erro de forma apropriada
     })
   );
 };

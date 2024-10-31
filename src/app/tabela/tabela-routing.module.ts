@@ -6,7 +6,7 @@ import { tabelaResolver } from './guards/tabela.resolver';
 
 const routes: Routes = [
   { path: '', component: TabelaComponent },
-  { path: 'new', component: TabelaFormComponent },
+  { path: 'new', component: TabelaFormComponent, resolve: { tabela: tabelaResolver } },
   { path: 'edit/:id', component: TabelaFormComponent, resolve: { tabela: tabelaResolver }}
 
 ];
