@@ -1,6 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Tabela } from '../../model/tabela';
-import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -12,6 +11,7 @@ export class TabelaListaComponent {
 
   @Input() tabela: Tabela[] = [];
   @Output() add = new EventEmitter(false);
+  @Output() edit = new EventEmitter(false);
 
   readonly displayedColumns = [ 'nome', 'categoria','actions'];
 
@@ -19,5 +19,9 @@ export class TabelaListaComponent {
 
   onAdd(){
     this.add.emit(true);
+  }
+
+  onEdit(tabela: Tabela){
+    this.edit.emit(tabela);
   }
 }

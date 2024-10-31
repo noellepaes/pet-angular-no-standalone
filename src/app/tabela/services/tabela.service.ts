@@ -21,6 +21,10 @@ export class TabelaService {
     );
   }
 
+  loadById(id: string){
+   return this.httpClient.get<Tabela>(`${this.API}/${id}`);
+  }
+
   save(record: Partial<Tabela>){
     return this.httpClient.post<Tabela>(this.API, record);
   }
