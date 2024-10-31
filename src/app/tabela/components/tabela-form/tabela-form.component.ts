@@ -1,8 +1,10 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { FormGroup, NonNullableFormBuilder } from '@angular/forms';
 import { Location } from '@angular/common';
 import { TabelaService } from '../../services/tabela.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Tabela } from '../../model/tabela';
 
 @Component({
   selector: 'app-tabela-form',
@@ -17,11 +19,20 @@ export class TabelaFormComponent {
     private formBuider: NonNullableFormBuilder,
     private service: TabelaService,
     private snackBar: MatSnackBar,
-    private location: Location
+    private location: Location,
+    private route: ActivatedRoute
   ){
     this.form = this.formBuider.group({
+      _id: [''],
       nome:[''],
       categoria: ['']
+    });
+
+    const tabela: Tabela = this.route.snapshot.data['tabela'];
+    this.form.setValue({
+      _id: tabela._id,
+      nome: tabela.nome,
+      categoria: tabela.categoria
     });
   }
 
