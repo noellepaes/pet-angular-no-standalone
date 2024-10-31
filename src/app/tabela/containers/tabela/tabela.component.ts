@@ -45,4 +45,8 @@ export class TabelaComponent {
   onAdd(){
     this.router.navigate(['new'], {relativeTo:this.route});
   }
+
+  onEdit(tabela: Tabela){
+    this.router.navigate(['edit', tabela._id], {relativeTo:this.route});
+  }
 }
