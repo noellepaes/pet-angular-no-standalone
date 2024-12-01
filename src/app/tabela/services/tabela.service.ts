@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Tabela } from '../model/tabela';
 import { HttpClient } from '@angular/common/http';
-import { delay, first, tap } from 'rxjs';
+import { delay, first, Observable, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +25,21 @@ export class TabelaService {
    return this.httpClient.get<Tabela>(`${this.API}/${id}`);
   }
 
-  save(record: Partial<Tabela>){
-    return this.httpClient.post<Tabela>(this.API, record);
+  save(record: Partial<Tabela>): Observable<Tabela>{
+    console.log(record);
+    if(record._id){
+      console.log('update');
+      return this.update(record);
+    }
+    console.log('create');
+    return this.create(record);
+  }
+
+  private create(record: Partial <Tabela>){
+    return this.httpClient.post<Tabela>(this.API, record).pipe(first());
+  }
+
+  private update(record: Partial<Tabela>){
+    return this.httpClient.post<Tabela>(`${this.API}/${record._id}`, record).pipe(first());
   }
 }
