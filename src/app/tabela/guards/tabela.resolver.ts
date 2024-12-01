@@ -11,7 +11,8 @@ export const tabelaResolver: ResolveFn<Tabela | null> = (route: ActivatedRouteSn
   const id = route.paramMap.get('id');  // Obtém o ID dos parâmetros da rota
 
   if (!id) {
-    return of(null);  // Retorna null se nenhum ID for encontrado
+    // If no ID is found, this is the "new" route. Return a default Tabela object.
+    return of({ _id: '', nome: '', categoria: '' }); // Default empty object for creation
   }
 
   return tabelaService.loadById(id).pipe(
