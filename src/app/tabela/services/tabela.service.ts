@@ -40,6 +40,6 @@ export class TabelaService {
   }
 
   private update(record: Partial<Tabela>){
-    return this.httpClient.post<Tabela>(`${this.API}/${record._id}`, record).pipe(first());
+    return this.httpClient.put<Tabela>(`${this.API}/${record._id}`, record).pipe(first());
   }
 }
