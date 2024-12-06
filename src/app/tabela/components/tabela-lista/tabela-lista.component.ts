@@ -12,6 +12,7 @@ export class TabelaListaComponent {
   @Input() tabela: Tabela[] = [];
   @Output() add = new EventEmitter(false);
   @Output() edit = new EventEmitter(false);
+  @Output() remove = new EventEmitter(false);
 
   readonly displayedColumns = [ 'nome', 'categoria','actions'];
 
@@ -23,5 +24,9 @@ export class TabelaListaComponent {
 
   onEdit(tabela: Tabela){
     this.edit.emit(tabela);
+  }
+
+  onDelete(tabela: Tabela){
+    this.remove.emit(tabela)
   }
 }
