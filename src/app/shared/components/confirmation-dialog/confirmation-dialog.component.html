@@ -1,1 +1,7 @@
-<p>confirmation-dialog works!</p>
+<mat-dialog-content>
+  <p>{{data}}</p>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="onConfirm(true)" color="primary">Sim</button>
+  <button mat-raised-button (click)="onConfirm(false)">Não</button>
+  <!-- <button mat-button [mat-dialog-close]="animal()" cdkFocusInitial></button> -->
+</mat-dialog-actions>
