@@ -11,12 +11,17 @@
             <form [formGroup]="form" class="min-width">
 
               <mat-form-field class="full-width">
-                <input matInput placeholder="Nome" formControlName="nome">
+                <mat-label>Nome</mat-label>
+                <input matInput placeholder="Nome" formControlName="nome" #nome>
+                <mat-hint >{{nome.value.length}}/100</mat-hint>
+                @if (form.get('nome')?.invalid) {
+                  <mat-error>{{errorMessage("nome")}}</mat-error>
+                }
               </mat-form-field>
 
               <mat-form-field class="full-width">
-                <mat-label>Toppings</mat-label>
-                <mat-select formControlName="categoria">
+                <mat-label>Categoria</mat-label>
+                <mat-select placeholder="Categoria" formControlName="categoria">
                   <mat-option value="null"></mat-option>
                   <mat-option value="front-end">front-end</mat-option>
                   <mat-option value="back-end">back-end</mat-option>
