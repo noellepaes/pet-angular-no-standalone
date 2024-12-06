@@ -1,3 +1,4 @@
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { catchError, Observable, of } from 'rxjs';
 import { TabelaService } from '../../services/tabela.service';
 import { Component } from '@angular/core';
@@ -14,7 +15,7 @@ import { relative } from 'path';
 })
 export class TabelaComponent {
 
-  tabela$: Observable<Tabela[]>;
+  tabela$: Observable<Tabela[]> | null = null;
 
 
 
@@ -23,9 +24,14 @@ export class TabelaComponent {
     private readonly tabelaService: TabelaService,
     public dialog: MatDialog,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private snackBar: MatSnackBar
   ) {
 
+    this.refresh();
+  }
+
+  refresh(){
     this.tabela$ = this.tabelaService.list()
     .pipe(
       catchError(error => {
@@ -49,4 +55,19 @@ export class TabelaComponent {
   onEdit(tabela: Tabela){
     this.router.navigate(['edit', tabela._id], {relativeTo:this.route});
   }
+
+  onRemove(tabela: Tabela){
+    this.tabelaService.remove(tabela._id).subscribe(
+      () => {
+        this.refresh();
+        this.snackBar.open('Curso removido com sucesso!', 'X', {
+          duration: 5000,
+          verticalPosition: 'top',
+          horizontalPosition:'center'
+        });
+      },
+      error => this.onError('Erro ao tentar remover curso.')
+    );
+  }
 }
+

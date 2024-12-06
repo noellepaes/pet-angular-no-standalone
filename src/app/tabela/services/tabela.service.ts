@@ -42,4 +42,8 @@ export class TabelaService {
   private update(record: Partial<Tabela>){
     return this.httpClient.put<Tabela>(`${this.API}/${record._id}`, record).pipe(first());
   }
+
+  remove(id: string){
+    return this.httpClient.delete(`${this.API}/${id}`).pipe(first());
+  }
 }
